@@ -1,18 +1,23 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
+ruby "3.0.2"
 gem 'pg'
 gem 'bcrypt', '~> 3.1.7'
 gem "faker", "~> 3.2"
 gem 'bootstrap-sass', '3.4.1'
 gem 'pry-byebug', '~> 3.7.0'
+# gem 'will_paginate'
 gem 'will_paginate'
-gem 'bootstrap-will_paginate', '1.0.0'
+gem 'bootstrap-will_paginate'
 gem 'active_storage_validations', '0.8.2'
 gem 'image_processing', '1.9.3'
 gem 'mini_magick'
+gem 'htmlbeautifier'
+gem 'rubocop'
 gem 'aws-sdk-s3', '1.46.0', require: false
+
+gem 'kaminari'
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"

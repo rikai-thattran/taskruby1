@@ -21,7 +21,7 @@ class User < ApplicationRecord
   # include ActiveModel::SecurePassword
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
-  validates_presence_of :password
+  # validates_presence_of :password
   validates_presence_of :name
   validates :password, presence: true, allow_nil: true
 
@@ -35,7 +35,7 @@ class User < ApplicationRecord
            else
              BCrypt::Engine.cost
            end
-    BCrypt::Password.create(string, cost:)
+    BCrypt::Password.create(string, cost:cost)
   end
 
   def self.new_token
